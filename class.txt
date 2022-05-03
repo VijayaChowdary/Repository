@@ -1,0 +1,292 @@
+import axios from "axios"
+import { useEffect, useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
+
+
+const api = 'https://hub.dummyapis.com/employee?noofRecords=10&idStarts=1001'
+export const ā = () => {
+
+    const hisotry = useNavigate()
+ā
+    const [employeeData, setEmployeeData] = useState([])
+
+    // const hisotry = useHistory()
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                let { data } = await axios.get(api)
+                setEmployeeData(data)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        fetchData()
+
+    }, [])
+
+    console.log("employeeDataemployeeData", employeeData)
+
+    return (
+        <>
+            This is Demo page
+
+            <button onClick={() => hisotry('/about')}>About</button>
+            <button onClick={() => hisotry('/home')} >home</button>
+            {/* <button onClick={()=>hisotry.push('/home')} >home</button> */}
+            <Link to={'/home'} > home</Link>
+            <table border="1" >
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>dob</th>
+                        <th>contactNumber</th>
+                        <th>imageUrl</th>
+                        <th>age</th>
+                        <th>salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {employeeData.map((data, index) => {
+                        return <tr key={index}>
+                            <td>{data.id}</td>
+                            <td>{data.firstName}</td>
+                            <td>{data.lastName}</td>
+                            <td>{data.dob}</td>
+                            <td>{data.contactNumber}</td>
+                            <td><img src={data.imageUrl} /></td>
+                            <td>{data.age}</td>
+                            <td>{data.salary}</td>
+                        </tr>
+                    })}
+                </tbody>
+            </table>
+        </>
+    )
+==========================================
+afSequelize metherdo 
+dialect
+ aws path called dialect 
+
+asw nae 
+
+try aswait
+ catch throw
+
+
+helpsers data base connectionwill be thereA
+we can write querry we will write
+=====================================
+event nime we can exartract from values
+=============================
+
+extract ${};
+================
+
+State 
+reducer dispatch
+Store will be same 
+stoe is a containder
+
+despatcher is a action 
+onclick when user delete then only it wil be display
+post update delete get action example
+==========
+reducer is logic impliment
+aciton which type of action it will send to reducer
+=====================
+redux reduce direcr it will give 
+through redux it will give which component we need we can give work
+================================================================
+firest we need to fdefine which type of action
+======
+export const createTestAction=() =>{
+    return 
+}
+==================
+Action types - which type constant type date define, 
+action - reducer when loginc i trigger to reduercer
+reducer- reducer logic will impliment and updated in store
+==================
+spread operator*****
+why to use
+deep******* copy
+shallow copy****
+====
+let a = [1,2,3,4]
+let c = [2,3,4,5]
+
+let d = [...a,...c]
+
+/* [1,2,3,4,2,3,4,5] */
+console.log(d)
+======
+createstore redux
+
+combinereducer
+react cant hand reducer middle wear redux =
+use dispatch
+use selector 
+========================
+import { testActionTypes } from "../constants/action_type"
+
+const intialState = {
+    count :10
+}
+
+
+export const testReducer = (state=intialState,action) => {
+    console.log("This is action",action)
+switch(action.type){
+    case testActionTypes.INCREMENT:
+        state = {
+            ...state,
+            count:state.count-1
+        }
+        break;
+    case testActionTypes.DECREMENT:
+        state = {
+            ...state,
+            count:state.count-1
+        }
+        break;
+}
+return state
+}
+====================================
+
+export enum testActionTypes {
+  INCREMENT='INCREMENT',
+  DECREMENT='DECREMENT'
+}
+
+Action type file>>>>>
+=========================
+
+
+import { testActionTypes } from "../constants/action_type"
+
+export const incrementAction=() =>{
+    return {
+        type:testActionTypes.INCREMENT
+    }
+}
+export const decrementAction=() =>{
+    return {
+        type:testActionTypes.DECREMENT
+    }
+}
+========================================
+ return (
+    <>   //
+      
+        
+       
+         
+        {myNewState.count}<br/>
+          <button onClick={increase}>Increent</button>  
+          <button onClick={decrement}>Decrement</button>
+            {/* <PublicRoutes />
+            <PrivateRoutes /> */}
+
+
+         
+    </>
+  
+
+export default App;
+===========================
+
+	
+function .js file
+======================
+download pg admin
+notjs
+docar
+vs code
+git
+linux kernal
+cls =clear
+npm create-react-aap  DemoApp
+
+npx create-react-aap  DemoApp
+
+code . = vs code open
+
+npm note package manager
+
+Web Dev Simplified
+C:\Users\rayap\vrishkar\vk-cleanerportal-ui\src\index.tsx
+babel
+------------------------
+jsx uses
+redux concept
+
+route 
+h87ztbgx 
+==============
+index
+aap
+about.js
+home.js
+dashboard
+
+ctrl shift  i 
+console
+==================
+https://codesandbox.io/s/new?file=/src/App.js
+code sandbax for react
+
+
+r -2.5
+l -1.25
+=======================
+How to create component
+2 norma and arrow function
+how to cratret a logical fun in react and exucute in react
+and event Onclick also
+===================
+
+
+
+3 mail
+1 candidare id proof
+adhar pan adhar front back 2/ pass pic 3
+kiran acada mic certificate
+kiran experiance certificate
+offerletter
+payslips
+all are in pdf
+=======================================
+https://www.tutorialsteacher.com/nodejs/nodejs-basics
+====================
+v921s61f
+
+figma
+=============
+export const ProjectNew = ()=>{
+     return(<p>this is my file </p>) 
+ 
+ }
+===============
+
+const fun = () =>{
+    alert('hi')
+}
+
+
+export const About  = () => <h1 onClick={fun} >hi</h1>
+
+==============================================
+
+export const About = () => {
+    return (
+        <>
+        
+        </>
+    )
+}
+
+=====================
